@@ -28,6 +28,22 @@
 ]
 **/
 
-export function findByType(pokedex, type) {
+interface PokemonInterface {
+	id: number;
+	name: string;
+	type: Array<string>;
+	height: string;
+	weight: string;
+	weaknesses: Array<string>;
+}
+
+export function findByType(pokedex: Array<PokemonInterface>, type: string): PokemonInterface[] {
 	// ???
+	const pokeSelection: PokemonInterface[] = [];
+	for (let poke of pokedex) {
+		if(poke.type.includes(type)) {
+			pokeSelection.push(poke);
+		}
+	}
+	return pokeSelection
 }

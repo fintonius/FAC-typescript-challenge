@@ -1,5 +1,5 @@
-/**
- * Example Pokédex data
+
+
 [
 	{
 		"id": 3,
@@ -26,7 +26,7 @@
 		"weaknesses": ["Electric", "Grass"]
 	}
 ]
-**/
+
 
 type Pokemon = {
 	id: number;

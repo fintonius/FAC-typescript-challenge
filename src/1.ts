@@ -1,11 +1,12 @@
-export function rollDice(quantity) {
+export function rollDice(quantity: number) {
 	return Array.from({ length: quantity }, () => {
 		let result = Math.floor(Math.random() * 6) + 1;
 		return "⚀⚀⚁⚂⚃⚄⚅"[result];
 	});
 }
 
-export function calculate(x, sign, y) {
+// IN THE BELOW 'sign' SHOULD BE SEPARATED OUT INTO IT'S OWN TYPE
+export function calculate(x: number, sign: '+'|'-'|'*'|'/', y: number) {
 	switch (sign) {
 		case "+":
 			return x + y;
@@ -20,6 +21,7 @@ export function calculate(x, sign, y) {
 	}
 }
 
-export function toBoolean(array) {
+// THIS SHOULD BE 'unknown' RATHER THAN 'number'
+export function toBoolean(array: Array<number>) {
 	return array.map((x) => Boolean(x));
 }
